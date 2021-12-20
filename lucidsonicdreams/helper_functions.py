@@ -18,9 +18,10 @@ def download_weights(url, output):
     gdown.download(url, output = output, quiet = False)
 
   elif 'mega.nz' in url:
-    m = Mega()
-    m.login().download_url(url, 
-                           dest_filename = output)
+    pass
+#     m = Mega()
+#     m.login().download_url(url, 
+#                            dest_filename = output)
 
   elif 'yadi.sk' in url:
     endpoint = 'https://cloud-api.yandex.net/v1/disk/'\
