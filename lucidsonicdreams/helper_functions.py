@@ -8,7 +8,7 @@ import pandas as pd
 import librosa
 import pygit2
 import gdown 
-#from mega import Mega
+from mega import Mega
 
 
 def download_weights(url, output):
@@ -18,10 +18,9 @@ def download_weights(url, output):
     gdown.download(url, output = output, quiet = False)
 
   elif 'mega.nz' in url:
-    pass
-#     m = Mega()
-#     m.login().download_url(url, 
-#                            dest_filename = output)
+    m = Mega()
+    m.login().download_url(url, 
+                           dest_filename = output)
 
   elif 'yadi.sk' in url:
     endpoint = 'https://cloud-api.yandex.net/v1/disk/'\
